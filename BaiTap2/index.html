@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cửa hàng linh kiện laptop TDAT</title>
+  <!-- Liên kết tới file CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -27,26 +29,29 @@
     <section id="products" aria-labelledby="products-title">
       <h2 id="products-title">Danh sách sản phẩm</h2>
 
-      <article aria-labelledby="p1-title">
-        <h3 id="p1-title">Pin laptop</h3>
-        <p><img src="https://hienlaptop.com/wp-content/uploads/2014/12/1525.jpg" alt="Hình ảnh Pin laptop HP" /></p>
-        <p>Mô tả: Pin thay thế cho nhiều dòng laptop, dung lượng 4400mAh, bảo hành 6 tháng.</p>
-        <p>Giá: <strong>750.000₫</strong></p>
-      </article>
+      <!-- product-list: dùng để áp dụng layout cột/hàng bằng CSS -->
+      <div id="product-list">
+        <article class="product-item" aria-labelledby="p1-title">
+          <h3 id="p1-title">Pin laptop</h3>
+          <p><img src="https://hienlaptop.com/wp-content/uploads/2014/12/1525.jpg" alt="Hình ảnh Pin laptop HP" /></p>
+          <p>Mô tả: Pin thay thế cho nhiều dòng laptop, dung lượng 4400mAh, bảo hành 6 tháng.</p>
+          <p>Giá: <strong>750.000₫</strong></p>
+        </article>
 
-      <article aria-labelledby="p2-title">
-        <h3 id="p2-title">Ổ SSD 500GB NVMe (Brand Z)</h3>
-        <p><img src="https://laptop88.vn/media/lib/3003_3003_wd_green_2_5_inch___2.png" alt="Hình ảnh ổ SSD 500GB" /></p>
-        <p>Mô tả: 500GB NVMe M.2, tốc độ đọc/ghi cao, phù hợp nâng cấp hệ thống.</p>
-        <p>Giá: <strong>1.150.000₫</strong></p>
-      </article>
+        <article class="product-item" aria-labelledby="p2-title">
+          <h3 id="p2-title">Ổ SSD 500GB NVMe (Brand Z)</h3>
+          <p><img src="https://laptop88.vn/media/lib/3003_3003_wd_green_2_5_inch___2.png" alt="Hình ảnh ổ SSD 500GB" /></p>
+          <p>Mô tả: 500GB NVMe M.2, tốc độ đọc/ghi cao, phù hợp nâng cấp hệ thống.</p>
+          <p>Giá: <strong>1.150.000₫</strong></p>
+        </article>
 
-      <article aria-labelledby="p3-title">
-        <h3 id="p3-title">Sạc laptop</h3>
-        <p><img src="https://hienlaptop.com/wp-content/uploads/2019/02/Sac-laptop-HP-19-5v-.jpg" alt="Hình ảnh Sạc laptop" /></p>
-        <p>Mô tả: Sạc đa đầu, tương thích nhiều thương hiệu, bảo vệ quá áp, quá dòng.</p>
-        <p>Giá: <strong>420.000₫</strong></p>
-      </article>
+        <article class="product-item" aria-labelledby="p3-title">
+          <h3 id="p3-title">Sạc laptop</h3>
+          <p><img src="https://hienlaptop.com/wp-content/uploads/2019/02/Sac-laptop-HP-19-5v-.jpg" alt="Hình ảnh Sạc laptop" /></p>
+          <p>Mô tả: Sạc đa đầu, tương thích nhiều thương hiệu, bảo vệ quá áp, quá dòng.</p>
+          <p>Giá: <strong>420.000₫</strong></p>
+        </article>
+      </div>
 
     </section>
 
@@ -77,9 +82,9 @@
     </section>
   </main>
 
-    <footer>
-        <p>&copy; 2024 TDAT - Cửa hàng linh kiện laptop. Địa chỉ: Đại học Bách Khoa Hà Nội. Điện thoại: 0376509329</p>
-    </footer>
+  <footer>
+    <p>&copy; 2024 TDAT - Cửa hàng linh kiện laptop. Địa chỉ: Đại học Bách Khoa Hà Nội. Điện thoại: 0372044565</p>
+  </footer>
 
 </body>
 </html>

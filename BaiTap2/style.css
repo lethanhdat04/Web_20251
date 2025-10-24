@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; /* font chung cho trang */
+  line-height: 1.5;
+  color: #222;
+  background-color: #f5f7fb; 
+
+header {
+  position: sticky;   /* header dính ở top khi cuộn */
+  background-color: #0b5ea8;
+  color: #fff;
+  padding: 14px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* đặt title và nav theo chiều dọc*/
+header h1 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+}
+
+/* Thanh điều hướng - dùng flex để căn ngang */
+nav ul {
+  list-style: none; /* bỏ dấu chấm mặc định */
+  padding: 0;
+  margin: 0;
+  display: flex; /* menu ngang ở desktop */
+  gap: 16px; /* khoảng cách giữa các mục */
+  align-items: center;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+main {
+  max-width: 1100px; /* giới hạn chiều ngang để đọc tốt */
+  margin: 20px auto; /* canh giữa */
+  padding: 0 16px;
+}
+
+
+#intro p {
+  margin: 8px 0 0 0;
+  color: #333;
+}
+
+/*Product list: sử dụng flex để chia cột trên màn hình*/
+/* #product-list là container, .product-item là từng sản phẩm */
+#product-list {
+  display: flex;
+  flex-wrap: wrap; /* cho xuống dòng khi không đủ chỗ */
+  gap: 20px;       /* khoảng cách giữa các sản phẩm */
+  margin-top: 12px;
+}
+
+/* Mỗi product-item chiếm khoảng 30%*/
+.product-item {
+  flex: 1 1 calc(33.333% - 20px); /* 3 cột, trừ gap */
+  background: #fff;
+  border: 1px solid #e1e6ef;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(2,6,23,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Ảnh co dãn theo kích thước khung, max-width để không tràn */
+.product-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+/* Tên sản phẩm nổi bật hơn */
+.product-item h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #0b3f6b;
+}
+
+/* Mô tả và giá */
+.product-item p {
+  margin: 0;
+  color: #444;
+}
+.product-item p strong {
+  color: #c93232; /* giá nổi bật màu đỏ */
+  font-size: 1rem;
+}
+
+/* Form được đặt giữa, tối đa 400px */
+form {
+  max-width: 420px;
+  margin: 18px auto;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #e6ecf5;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(2,6,23,0.03);
+}
+
+/* Các ô input textarea có padding, viền nhẹ */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #ccd6e6;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* Nút gửi nổi bật */
+button[type="submit"] {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0b5ea8;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background-color: #084f8a;
+}
+
+/* ========== Footer ========== */
+footer {
+  text-align: center;
+  padding: 14px 10px;
+  background-color: #0b5ea8;
+  color: #fff;
+  margin-top: 24px;
+  font-size: 0.9rem;
+}
+
+/* Responsive: điều chỉnh cho màn hình mobile */
+/* Khi màn hình nhỏ hơn hoặc bằng 600px, hiển thị 1 cột, menu dọc... */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column; /* menu dọc trên mobile */
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  /* sản phẩm xếp dọc 1 cột để đọc tốt trên mobile */
+  #product-list {
+    flex-direction: column;
+  }
+  .product-item {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  /* giảm margin/padding để tận dụng không gian trên mobile */
+  main {
+    margin: 10px;
+    padding: 0 8px;
+  }
+
+  /* form full-width hơn trên mobile */
+  form {
+    margin: 12px 4px;
+    padding: 10px;
+  }
+}
+
+/* Một media query bổ sung cho tablet (giữa mobile và desktop) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .product-item {
+    flex: 1 1 calc(50% - 20px); /* 2 cột trên tablet */
+  }
+}
+
+}
